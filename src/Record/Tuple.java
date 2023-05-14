@@ -1,4 +1,7 @@
-// Generic class that stores three objects of different types
+package Record;
+
+/* Generic class that stores three objects of different types. This is not a record but is
+ used to contrast with the Pair record and show how much boilerplate is reduced. */
 public class Tuple<T, U, V> {
 
     private final T first;

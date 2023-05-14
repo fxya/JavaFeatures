@@ -1,3 +1,5 @@
+package Record;
+
 // Generic record that stores two objects of different types
 public record Pair <T, U> (T first, U second) {
 
