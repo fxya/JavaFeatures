@@ -4,7 +4,7 @@ package Record;
 public record Pair <T, U> (T first, U second) implements DataStructure {
 
     private static final int SIZE = 2;
-
+    @Override
     public int getSize() {
         return SIZE;
     }

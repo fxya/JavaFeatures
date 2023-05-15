@@ -3,6 +3,8 @@ package Record;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class RecordTest {
     /* In practice, you would probably use a record directly to store an address
      * instead of using a record to store a record. This is just an example.
@@ -18,19 +20,19 @@ public class RecordTest {
     @Test
     public void creatingNewPair_returnsObjectWithSize2() {
         // getSize() is a default method implemented in Record.Pair
-        assert address.getSize() == 2;
+        assertEquals (address.getSize(), 2);
     }
 
     @Test
     public void gettingFirstElementOfPair_returnsFirstElement() {
         // first() is not explicitly defined in Record.Pair
-        assert address.first().equals("Firstname Lastname");
+        assertEquals(address.first(), ("Firstname Lastname"));
     }
 
     @Test
     public void gettingSecondElementOfPair_returnsSecondElement() {
         // second() is not explicitly defined in Record.Pair
-        assert address.second().equals(new Tuple<>("123 Main St", "New York", "NY"));
+        assertEquals(address.second(), (new Tuple<>("123 Main St", "New York", "NY")));
     }
 
     @Test
@@ -38,9 +40,9 @@ public class RecordTest {
         Address address = new Address("123 Fake St", "San Francisco", "SF");
 
         // None of the methods below are explicitly defined in Record.Address
-        assert address.street().equals("123 Fake St");
-        assert address.city().equals("San Francisco");
-        assert address.state().equals("SF");
+        assertEquals(address.street(), ("123 Fake St"));
+        assertEquals(address.city(), ("San Francisco"));
+        assertEquals(address.state(), ("SF"));
     }
 
 }

@@ -16,6 +16,7 @@ public final class Tuple<T, U, V> implements DataStructure {
         this.third = third;
     }
 
+    @Override
     public int getSize() {
         return SIZE;
     }
