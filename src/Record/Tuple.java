@@ -20,15 +20,15 @@ public final class Tuple<T, U, V> implements DataStructure {
         return SIZE;
     }
 
-    T getFirst() {
+    public T getFirst() {
         return first;
     }
 
-    U getSecond() {
+    public U getSecond() {
         return second;
     }
 
-    V getThird() {
+    public V getThird() {
         return third;
     }
 
