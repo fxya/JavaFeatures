@@ -9,7 +9,7 @@ public class RecordTest {
     /* In practice, you would probably use a record directly to store an address
      * instead of using a record to store a record. This is just an example.
      */
-    private Pair<String, Tuple<String, String, String>> address;
+        private Pair<String, Tuple<String, String, String>> address;
 
     @BeforeEach
     public void setUp() {
